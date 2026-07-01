@@ -11,3 +11,5 @@
 - 讨论了 Serial.begin 不初始化会怎样
 - 讨论了 OUTPUT 模式是什么、如何用万用表验证 GPIO 输出
 - 讨论了上拉电阻的作用和 INPUT_PULLUP 模式
+- 创建 breathing-led 项目，学习 PWM 呼吸灯
+- 讨论了 PWM 通道的作用（独立发生器，互不干扰）

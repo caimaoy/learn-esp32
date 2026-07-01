@@ -5,6 +5,7 @@
 ### 概念
 - [ESP32 开发板概述](esp32-overview.md) — 芯片规格、开发板介绍
 - [GPIO 基础](gpio-basics.md) — OUTPUT/INPUT 模式、万用表验证
+- [PWM 脉冲宽度调制](pwm.md) — LEDC 通道、频率/分辨率/占空比
 - [串口通信](serial-communication.md) — Serial.begin、波特率、USB 通信
 
 ### 指南
