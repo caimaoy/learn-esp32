@@ -53,3 +53,12 @@
 - 引入 `secrets.h` 凭据分离模式（.gitignore 排除，参考 `secrets.example.h`）
 - 手动解析 JSON：发现 `indexOf` 找到 `current_units` 段（非目标），改用 `lastIndexOf` 定位 `current` 段
 - 创建 `weather-station.md` wiki 页面，记录：双模配置、NTP、HTTP 客户端、JSON 解析、secrets.h 模式
+
+## [2026-07-06] 记录 | WiFi 配置管理器
+- 新项目 `wifi-manager`：Web 页面扫描/手动输入 WiFi 凭据，NVS 持久化
+- 修复：`WiFi.mode(WIFI_AP)` → `WIFI_AP_STA`（扫描需要 STA 接口）
+- 修复：`prefs.begin("wifi", true)` → `false`（首次启动 NOT_FOUND）
+- 修复：JS raw string 中 `\\'` → `\'`（raw string 中反斜杠是字面量，导致 JS 语法错误）
+- 新增：手动输入 SSID 兜底功能
+- 优化：扫描只启动一次，加 `scanStarted` 标志避免重复触发
+- 创建 `wifi-manager.md` wiki 页面
