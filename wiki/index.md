@@ -8,6 +8,7 @@
 - [GPIO 基础](gpio-basics.md) — OUTPUT/INPUT 模式、万用表验证
 - [PWM 脉冲宽度调制](pwm.md) — LEDC 通道、频率/分辨率/占空比
 - [串口通信](serial-communication.md) — Serial.begin、波特率、USB 通信
+- [NVS 非易失性存储](nvs.md) — Preferences 库、命名空间、分区大小
 
 ### 指南
 - [开发环境搭建](setup-guide.md) — VS Code + PlatformIO + uv 安装

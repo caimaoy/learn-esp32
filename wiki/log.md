@@ -62,3 +62,8 @@
 - 新增：手动输入 SSID 兜底功能
 - 优化：扫描只启动一次，加 `scanStarted` 标志避免重复触发
 - 创建 `wifi-manager.md` wiki 页面
+
+## [2026-07-06] 问答 | NVS 存储空间和用法
+- 讨论 NVS 是什么：Flash 上的键值对存储，掉电不丢
+- 默认分区下 NVS 大小 20KB（0x5000）
+- 创建 `wiki/nvs.md` 页面
