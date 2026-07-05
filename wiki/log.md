@@ -43,3 +43,13 @@
   - `delay(10)` 控制 CPU 占用和 WiFi 稳定性
   - JS 轮询 vs 服务器推送的区别
   - 数据流全景图
+
+## [2026-07-05] 新项目 | apsta-weather — AP+STA 双模天气站
+- 新建 `apsta-weather` 项目，集成三块数据：
+  - 室内：DHT11 温湿度（本地传感器）
+  - 室外：Open-Meteo 免费天气 API（温度、湿度、风速、天气描述）
+  - 时间：NTP 网络时间同步
+- 双模 WiFi：STA 连用户路由器 + AP 开热点直连
+- 引入 `secrets.h` 凭据分离模式（.gitignore 排除，参考 `secrets.example.h`）
+- 手动解析 JSON：发现 `indexOf` 找到 `current_units` 段（非目标），改用 `lastIndexOf` 定位 `current` 段
+- 创建 `weather-station.md` wiki 页面，记录：双模配置、NTP、HTTP 客户端、JSON 解析、secrets.h 模式

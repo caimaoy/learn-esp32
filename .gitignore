@@ -1,4 +1,5 @@
 .pio
+secrets.h
 .vscode/
 .serena/
 __pycache__

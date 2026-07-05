@@ -13,6 +13,7 @@
 - [开发环境搭建](setup-guide.md) — VS Code + PlatformIO + uv 安装
 - [Blink 项目详解](first-blink.md) — 第一个程序逐行解释
 - [DHT11 温湿度传感器](dht11.md) — 单总线通信、温湿度读取
+- [AP+STA 双模天气站](weather-station.md) — 双模 WiFi、NTP 时间、HTTP 天气 API、secrets.h 凭据分离
 - [学习计划](../LEARNING_PLAN.md) — 学习路线图
 
 ### 常见问题
