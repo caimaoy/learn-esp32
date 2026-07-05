@@ -65,3 +65,14 @@ ESP32 Dev Module 排针上标有：
 - `GND` — 地线
 - `3V3` — 3.3V 电源输出
 - `5V` — 5V 电源输出
+
+## 已知限制：GPIO 2 与 WiFi 冲突
+
+**现象：** 启用 `WiFi.softAP()` 后，`digitalWrite(GPIO2, HIGH)` 无法点亮板载 LED。
+同一份代码去掉 WiFi 即可正常工作。
+
+**推测原因：** GPIO 2 是 ESP32 的 strapping 引脚（MTDI），WiFi 协议栈启动后可能修改了引脚配置。
+
+**解决方案：**
+- 使用其他空闲引脚（如 GPIO 16、GPIO 17）驱动 LED
+- 如果必须用 GPIO 2，确认 `pinMode` 在 `WiFi.softAP()` **之后**调用（但实测仍然无效）

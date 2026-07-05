@@ -3,6 +3,7 @@
 ## 页面列表
 
 ### 概念
+- [WiFi AP + Web Server](wifi-web-server.md) — softAP、路由注册、handleClient 同步非阻塞轮询
 - [ESP32 开发板概述](esp32-overview.md) — 芯片规格、开发板介绍
 - [GPIO 基础](gpio-basics.md) — OUTPUT/INPUT 模式、万用表验证
 - [PWM 脉冲宽度调制](pwm.md) — LEDC 通道、频率/分辨率/占空比
@@ -15,5 +16,7 @@
 - [学习计划](../LEARNING_PLAN.md) — 学习路线图
 
 ### 常见问题
+- [编译烧录问题](build-issues.md) — 缓存导致固件不工作、端口被占用
 - 串口乱码 — ESP32 启动时 ROM bootloader 输出
 - Serial Monitor 连接时序 — setup 打印有时看不到的问题
+- [GPIO 2 与 WiFi 冲突](gpio-basics.md#已知限制gpio-2-与-wifi-冲突) — WiFi 启用后 GPIO 2 无法输出

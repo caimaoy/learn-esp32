@@ -22,3 +22,24 @@
 - 实测：温度 27-28°C，湿度 51-54%（室温）
 - 学习了 `Serial.begin` 不 `delay(1000)` 可能导致开头输出丢失
 - 创建 wiki 页面 `dht11.md`
+
+## [2026-07-02] 整理 | 记录编译缓存踩坑、创建 build-issues.md
+- 将 AGENTS.md 中的"已知坑"整理到 wiki
+- 新建 `build-issues.md`：老旧缓存导致固件不工作 + 串口端口占用
+- 更新 `index.md`
+
+## [2026-07-05] 发现 | GPIO 2 与 WiFi 冲突
+- `wifi-web-control` 中板载 LED（GPIO 2）在 WiFi AP 启动后无法输出 HIGH
+- 改用 GPIO 16 可正常工作
+- 记录到 `gpio-basics.md` 已知限制章节
+- 简化代码：去掉 LED 控制，只保留 DHT11 温湿度显示（HTTP + JSON API）
+- 串口输出乱码疑似因 WebServer 占用 CPU，但网页正常
+
+## [2026-07-05] 新增 | WiFi AP + Web Server wiki 页面
+- 新建 `wifi-web-server.md`，覆盖：
+  - `WiFi.softAP()` 的 SSID/密码规则和默认 IP
+  - `server.on()` 路由注册和 `begin()` 启动
+  - `handleClient()` 同步非阻塞轮询机制
+  - `delay(10)` 控制 CPU 占用和 WiFi 稳定性
+  - JS 轮询 vs 服务器推送的区别
+  - 数据流全景图
