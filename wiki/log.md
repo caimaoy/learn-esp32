@@ -13,3 +13,12 @@
 - 讨论了上拉电阻的作用和 INPUT_PULLUP 模式
 - 创建 breathing-led 项目，学习 PWM 呼吸灯
 - 讨论了 PWM 通道的作用（独立发生器，互不干扰）
+
+## [2026-07-02] 记录 | DHT11 温湿度传感器
+- 新项目 `dht11-sensor`，使用 Adafruit DHT sensor library
+- 接线：VCC→3.3V, DATA→GPIO4, GND→GND
+- 学习了：`DHT dht(pin, type)` 对象创建、`dht.begin()`、单总线协议
+- 学习了：`isnan()` 判断读取失败
+- 实测：温度 27-28°C，湿度 51-54%（室温）
+- 学习了 `Serial.begin` 不 `delay(1000)` 可能导致开头输出丢失
+- 创建 wiki 页面 `dht11.md`
